@@ -10,18 +10,18 @@ public class TriangleEdgeValidator {
                 if (edge > 0) {
                     break;
                 } else {
-                    errorMessage("Edge can't be less than 0.");
+                    printErrorMessage("Edge can't be less than 0.");
                     scanner.nextLine();
                 }
             } else {
-                errorMessage("Invalid triangle edge.");
+                printErrorMessage("Invalid triangle edge.");
                 scanner.nextLine();
             }
         }
         return edge;
     }
 
-    private static void errorMessage(String message) {
+    private static void printErrorMessage(String message) {
         System.err.println(message);
         System.out.println("Please, enter the edge of the triangle: ");
     }
